@@ -226,10 +226,10 @@ func PushAny(L *lua.State, ival interface{}) {
 	case reflect.String:
 		L.PushString(rv.String())
 	case reflect.Int, reflect.Int8, reflect.Int16, reflect.Int32, reflect.Int64:
-		L.PushNumber(float64(rv.Int()))
+		L.PushInteger(int64(rv.Int()))
 	case reflect.Uint, reflect.Uintptr, reflect.Uint8,
 		reflect.Uint16, reflect.Uint32, reflect.Uint64:
-		L.PushNumber(float64(rv.Uint()))
+		L.PushInteger(int64(rv.Uint()))
 	case reflect.Float32, reflect.Float64:
 		L.PushNumber(rv.Float())
 	case reflect.Bool:
