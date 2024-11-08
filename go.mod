@@ -1,4 +1,4 @@
-module github.com/fiatjaf/lunatico
+module github.com/mrnavastar/lunatico
 
 go 1.14
 
